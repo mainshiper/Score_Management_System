@@ -48,7 +48,7 @@ namespace WindowsFormsApp1
 
         public void bt_login_click_Click(object sender, EventArgs e)
         {
-                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=\"C:\\Users\\klmas\\Desktop\\데이터베이스 (2)\\Data5.mdf\";Integrated Security=True;Connect Timeout=30"); //나의 컴 데이터 베이스 
+                SqlConnection con = new SqlConnection("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\klmas\\Desktop\\WindowsFormsApp1\\DB\\data2.mdf;Integrated Security=True;Connect Timeout=30"); //나의 컴 데이터 베이스 
                 SqlDataAdapter sda = new SqlDataAdapter("Select Count(*) from UserINFO where USERNAME='"+ID_TXT.Text+"' and PASSWORD='"+PASSWORD_TXT.Text+"'",con); //선택된 객체를 세어라 (userinfo 테이블에서 )
                 //아이디 와 패스워드 가 만족하면 1을 반환 아니면 0반환 
                 DataTable newTable = new DataTable(); //데이터테이블 생성
